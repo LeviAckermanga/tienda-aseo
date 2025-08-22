@@ -1,6 +1,13 @@
 from django.shortcuts import render
-from .models import Producto
 
 def home(request):
-    productos = Producto.objects.all()[:6]  # Mostrar 6 productos destacados
-    return render(request, "home.html", {"productos": productos})
+    return render(request, 'productos/home.html')
+
+def productos(request):
+    return render(request, 'productos/home.html')
+
+def carrito(request):
+    return render(request, 'productos/carrito.html')
+
+def contacto(request):
+    return render(request, 'productos/contacto.html')
